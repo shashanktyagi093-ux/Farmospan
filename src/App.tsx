@@ -6,7 +6,6 @@ import {
   TrendingUp, Landmark, Shield, Truck, Edit3, Briefcase, Info, BadgeAlert,
   Camera, Trash, Upload, Printer, FileText, Calendar
 } from "lucide-react";
-import { Analytics } from '@vercel/analytics/react';
 import { CropListing, BuyerBid, DirectMessage, UserProfile } from "./types";
 import AiListingModal from "./components/AiListingModal";
 import TrustScorecard, { getDeterministicTrustStats } from "./components/TrustScorecard";
@@ -3555,8 +3554,6 @@ export default function App() {
           </div>
         </div>
       </footer>
-      
-      <Analytics />
 
     </div>
   );

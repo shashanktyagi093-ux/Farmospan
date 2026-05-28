@@ -3,9 +3,8 @@ import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
 import { fileURLToPath } from "url";
-import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
-import { CropListing, BuyerBid, DirectMessage, MarketPriceTrend } from "./src/types.js";
+import type { CropListing, BuyerBid, DirectMessage, MarketPriceTrend } from "./src/types.js";
 
 // Load environment variables
 dotenv.config();
@@ -19,12 +18,17 @@ const PORT = 3000;
 
 app.use(express.json());
 
-const DB_DIR = path.join(process.cwd(), "data");
+const isVercel = !(!process.env.VERCEL);
+const DB_DIR = isVercel ? "/tmp" : path.join(process.cwd(), "data");
 const DB_FILE = path.join(DB_DIR, "db.json");
 
 // Ensure data directory exists
 if (!fs.existsSync(DB_DIR)) {
-  fs.mkdirSync(DB_DIR);
+  try {
+    fs.mkdirSync(DB_DIR, { recursive: true });
+  } catch (err) {
+    console.error("Failed to create DB_DIR:", err);
+  }
 }
 
 // Default Seed Data
@@ -865,6 +869,8 @@ Return ONLY valid raw JSON data matching this exact schema. Do not include markd
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {
     // Development Mode
+    const viteModuleName = ["v", "i", "t", "e"].join("");
+    const { createServer: createViteServer } = await import(viteModuleName);
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa"
@@ -887,6 +893,8 @@ async function startServer() {
   });
 }
 
-startServer();
+if (!process.env.VERCEL) {
+  startServer();
+}
 
 export default app;
