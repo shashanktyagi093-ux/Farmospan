@@ -6,6 +6,7 @@ import {
   TrendingUp, Landmark, Shield, Truck, Edit3, Briefcase, Info, BadgeAlert,
   Camera, Trash, Upload, Printer, FileText, Calendar
 } from "lucide-react";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { CropListing, BuyerBid, DirectMessage, UserProfile } from "./types";
 import AiListingModal from "./components/AiListingModal";
 import TrustScorecard, { getDeterministicTrustStats } from "./components/TrustScorecard";
@@ -3540,6 +3541,9 @@ export default function App() {
           </div>
         </div>
       )}
+
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
 
       {/* ----------------- MOBILE FRIENDLY SUB-APP NAVIGATION INDICATOR ----------------- */}
       <footer className="bg-white border-t border-gray-100 py-3.5 px-4 text-center text-xs text-gray-500 font-sans mt-auto">
