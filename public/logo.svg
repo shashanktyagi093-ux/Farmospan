@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Definitions for Gradients -->
+  <defs>
+    <linearGradient id="leafGrad" x1="120" y1="120" x2="380" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="200" y1="100" x2="420" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="subtle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="8" stdDeviation="6" flood-color="#022c22" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Elegant circular background with organic look -->
+  <rect x="24" y="24" width="464" height="464" rx="232" fill="#064E3B" filter="url(#subtle-shadow)" />
+
+  <!-- Inner decorative ring -->
+  <circle cx="256" cy="256" r="216" fill="none" stroke="#059669" stroke-width="4" stroke-dasharray="12 8" opacity="0.4" />
+
+  <!-- Central Wheat Kernel Stets and Leaves (representing Direct Harvest and Growth) -->
+  <path d="M250 400C160 400 100 320 100 240C100 170 145 120 190 90C180 150 200 250 250 310C210 260 195 190 200 125C215 110 235 100 250 95C250 170 230 300 250 400Z" fill="url(#leafGrad)" />
+  <path d="M262 400C262 300 282 170 262 95C277 100 297 110 312 125C317 190 302 260 262 310C312 250 332 150 322 90C367 120 412 170 412 240C412 320 352 400 262 400Z" fill="url(#goldGrad)" opacity="0.95" />
+
+  <!-- Beautiful Central Wheat Kernels -->
+  <circle cx="256" cy="150" r="14" fill="#FBBF24" />
+  <circle cx="286" cy="180" r="16" fill="#FBBF24" />
+  <circle cx="226" cy="190" r="14" fill="#6EE7B7" />
+  <circle cx="288" cy="225" r="16" fill="#FCD34D" />
+  <circle cx="224" cy="235" r="14" fill="#34D399" />
+  <circle cx="282" cy="275" r="14" fill="#F59E0B" />
+  <circle cx="230" cy="280" r="12" fill="#059669" />
+
+  <path d="M256 410 L256 120" stroke="#FBBF24" stroke-width="6" stroke-linecap="round" opacity="0.8" />
+</svg>

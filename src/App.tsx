@@ -1064,47 +1064,13 @@ export default function App() {
           <div className="flex items-center gap-3">
             <div className="relative group">
               <div className="absolute inset-0 bg-emerald-500/10 rounded-xl blur-md group-hover:bg-emerald-500/20 transition-all"></div>
-              <div className="relative w-11 h-11 bg-slate-900 rounded-xl flex items-center justify-center text-white shadow-md border border-slate-800">
-                <svg className="w-8 h-8 group-hover:scale-105 transition-transform" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Agricultural furrow background curve */}
-                  <path d="M 4 25 C 10 28, 22 28, 28 25" stroke="url(#gridGrad)" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-                  
-                  {/* The connection "Span" loop (Infinity shape representing direct trade flow) */}
-                  <path d="M 6 18 C 5 23, 13 24, 16 18 C 19 12, 27 13, 26 18 C 25 23, 17 24, 16 18 C 13 12, 5 13, 6 18 Z" stroke="url(#spanGrad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  
-                  {/* Organic Sprout Leaf emerging from the span bridge */}
-                  <path d="M 16 24 C 16 24, 11 16, 12 11 C 13 6, 16 3, 16 3" stroke="url(#farmGrad)" strokeWidth="2.5" strokeLinecap="round" />
-                  <path d="M 16 13 C 21 15, 20 21, 16 24" stroke="url(#farmGrad)" strokeWidth="2" strokeLinecap="round" />
-                  
-                  {/* Smart tech direct trading nodes */}
-                  {/* Grower node (Emerald Green) */}
-                  <circle cx="6" cy="18" r="2" fill="#10b981" />
-                  
-                  {/* Buyer node (Amber Gold) */}
-                  <circle cx="26" cy="18" r="2" fill="#fbbf24" />
-                  
-                  {/* Golden AI Price and Security Star/dot at the peak of the sprout */}
-                  <circle cx="16" cy="3" r="2.5" fill="#f59e0b" className="animate-pulse" />
-                  <circle cx="16" cy="3" r="1" fill="#ffffff" />
-
-                  <defs>
-                    <linearGradient id="farmGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#047857" />
-                      <stop offset="60%" stopColor="#10b981" />
-                      <stop offset="100%" stopColor="#34d399" />
-                    </linearGradient>
-                    <linearGradient id="spanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#10b981" />
-                      <stop offset="50%" stopColor="#34d399" />
-                      <stop offset="100%" stopColor="#fbbf24" />
-                    </linearGradient>
-                    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#047857" />
-                      <stop offset="50%" stopColor="#10b981" />
-                      <stop offset="100%" stopColor="#047857" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+              <div className="relative w-11 h-11 rounded-xl flex items-center justify-center shadow-md border border-emerald-800/20 overflow-hidden bg-emerald-950">
+                <img
+                  src="/logo.svg"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  alt="FarmosPan Logo"
+                  referrerPolicy="no-referrer"
+                />
               </div>
             </div>
             <div>
