@@ -1,0 +1,6 @@
+{
+  "name": "farmospan",
+  "description": "A direct marketplace connecting farmers (Kisans) and buyers directly with zero middlemen, featuring AI pricing wisdom, localized listing assistants, and real-time bids/chats.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
