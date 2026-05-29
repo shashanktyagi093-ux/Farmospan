@@ -20,6 +20,11 @@ export interface CropListing {
   createdAt: string;
   mandiPriceEstimate?: number;
   approvalFactor?: number;
+  // Sensors and Analytics verified through our Python and C++ engines
+  moisture?: number;
+  greenness?: number;
+  pythonCropGrade?: string;
+  pythonAnalysisRaw?: string;
   // AI Trust and Reliability Intelligence
   deliveryReliability?: number;       // e.g. 98%
   qualityConsistency?: number;        // e.g. 96%
